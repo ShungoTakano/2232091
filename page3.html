@@ -5,31 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ページ3</title>
   <style type="text/css">
-    #one {
-      background-color: #b0c4de;
-      width: 200px;
-      height: 200px;
-      float: left;
-      margin-right: 20px;
-    }
-    #two {
-      background-color: #e6e6fa;
-      width: 300px;
-      height: 200px;
-      float: right;
-    }
+    /* 親要素の設定 */
     .bigbox {
-      clear: both;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
       width: 500px;
-      height: 300px;
       margin-bottom: 20px;
+      border: 1px solid #ccc;
     }
+
+    /* #oneと#twoを同じ高さにする */
+    #one, #two {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+    }
+
+    #one {
+      background-color: #F78486;
+      width: 200px;
+      flex: 1;
+    }
+
+    #two {
+      background-color: #FFF616;
+      width: 300px;
+      flex: 1;
+    }
+
+    /* 画像の中央配置 */
     img {
-      display: block;
-      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
     }
+
     p {
       text-align: center;
+      padding: 10px;
     }
   </style>
 </head>
@@ -49,8 +64,8 @@
   </header>
 
   <main>
+    <!-- ショートケーキセクション -->
     <div class="bigbox">
-      <h3>ショートケーキ</h3>
       <div id="one">
         <img src="cake01.jpg" width="179" height="179" alt="ショートケーキ">
       </div>
@@ -61,8 +76,8 @@
       </div>
     </div>
 
+    <!-- モンブランセクション -->
     <div class="bigbox">
-      <h3>モンブラン</h3>
       <div id="one">
         <img src="cake02.jpg" width="179" height="179" alt="モンブラン">
       </div>
@@ -73,8 +88,8 @@
       </div>
     </div>
 
+    <!-- ザッハトルテセクション -->
     <div class="bigbox">
-      <h3>ザッハトルテ</h3>
       <div id="one">
         <img src="cake03.jpg" width="179" height="179" alt="ザッハトルテ">
       </div>
@@ -85,8 +100,8 @@
       </div>
     </div>
 
+    <!-- シュークリームセクション -->
     <div class="bigbox">
-      <h3>シュークリーム</h3>
       <div id="one">
         <img src="cake04.jpg" width="179" height="179" alt="シュークリーム">
       </div>
@@ -105,4 +120,3 @@
   </footer>
 </body>
 </html>
-
