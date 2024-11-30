@@ -1,0 +1,263 @@
+/*ルート定義*/
+:root {
+    /*フォント定義*/
+    --font-primary:'Noto Serif JP', serif; /*和風フォント*/
+    --font-secondary:'Kozuka Mincho Pr6N', serif; /*和風フォント*/
+    --font-body: 'Noto Sans JP', serif; /*汎用的なフォント*/
+    /*カラー定義*/
+    --color-background: #fc9d92; /*背景*/
+    --color-box: #fff8f0; /*枠内の背景*/
+    --color-headr: #8b3a3a; /*ヘッダーの背景*/
+    --color-bottm: #e38c00; /*ボタンの色*/
+    --color-bottm-hover: #ff6347; /*カーソルを合わせた時に変化するボタンの色*/
+    --color-shadow: #333; /*影の色*/
+    --color-text-default: #333; /*普通の字の色*/
+    --color-text-head: #fff; /*見出しの字の色*/
+    --color-text-boxhead: #8b3a3a; /*枠内の見出しの字の色*/ 
+  }
+  
+  html {
+    font-size: 62.5%; /*1rem = 10pxにする*/
+  }
+  
+  h1, h2, a {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+  }
+  
+  h3 {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    color: var(--color-text-head);
+    margin-bottom: 1rem;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-default);
+    font-family: var(--font-body);
+    margin: 0; /*要素外の余白*/
+    padding: 1.6rem; /*要素の余白*/
+    line-height: 1.5; /*行間指定(1.5~2.0が理想らしい)*/
+  }
+  
+  header {
+    background-color: var(--color-headr);
+    color: var(--color-text-head);
+    text-align: center; /*文字配置*/
+    margin: 0;
+    padding: 1.6rem 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px var(--color-shadow); /*ヘッダーの枠の影*/
+    font-size: 3.2rem;
+    font-family: var(--font-primary);
+    letter-spacing: 2px; /*文字間隔*/
+  }
+  
+  main {
+    text-align: center;
+    margin-top: 3.2rem;
+  }
+  
+  /*=============================================
+  ここから.header, .logo, .head -> ヘッダーのクラス
+  ==============================================*/
+  .header {
+    display: flex;
+    align-items: center;
+    max-width: 1200rem; /* コンテンツ幅を制限 */
+    height: 12rem;
+    margin: 0 auto;
+    padding: 0 20rem;
+    gap: 2rem;
+  }
+  
+  .logo img {
+    height: 12rem;
+    width: auto; /*アスペクト比を維持*/
+    margin: 1rem;
+    border: 3px solid var(--color-shadow);
+    border-radius: 10px;
+    object-fit:contain;
+  }
+  
+  .head img {
+    height: 6rem;
+    width: auto;
+    justify-content: center;
+    margin: 0;
+    padding: 0 16rem;
+  }
+  /*=============================================
+  ここまで.header, .logo, .head -> ヘッダーのクラス
+  ==============================================*/
+  
+  /*=============================================
+  ここから.menu-head, .menu, .menu-item -> メニューのクラス
+  ==============================================*/
+  .menu-head{
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-box);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px var(--color-shadow);
+    width: 104rem;
+    margin: 0 auto;
+  }
+  
+  .menu-head h2{
+    font-size: 5rem;
+    color: var(--color-headr);
+    font-family: var(--font-primary);
+    letter-spacing: 1rem;
+    text-shadow: 4px 4px 4px var(--color-shadow);
+    margin: 0;
+    margin-top: 1rem;
+  }
+  
+  .menu-head p{
+    font-size: 2rem;
+    color: var(--color-text-default);
+    font-family: var(--font-primary);
+    margin: 0;
+  }
+  
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); /* 自動調整 */
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-box);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .menu-item h3 {
+    font-size: 2.4rem;
+    color: var(--color-headr);
+    margin-bottom: 1rem;
+    font-family: var(--font-secondary);
+  }
+  
+  .menu-item img {
+    width: 40rem;
+    height: 30rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px var(--color-shadow);
+    margin-bottom: 1.5rem;
+  }
+  
+  .menu-item p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-text-default);
+  }
+  
+  /*=============================================
+  ここまで.menu-head, .menu, .menu-item -> メニューのクラス
+  ==============================================*/
+  
+  /*=============================================
+  ここから.menu-links -> ナビゲーションのクラス
+  ==============================================*/
+  .menu-links {
+    background-color: var(--color-box);
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px var(--color-shadow);
+    width: 100rem;
+  }
+  
+  .menu-links h2 {
+    font-size: 2.4rem;
+    color: var(--color-headr);
+    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+  }
+  
+  .menu-links .contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    justify-content: center;
+  }
+  
+  .menu-links .item a {
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    background-color: var(--color-bottm);
+    color: var(--color-text-head);
+    text-decoration: none;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px var(--color-shadow);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu-links .item a:hover {
+    background-color: var(--color-bottm-hover);
+    transform: translateY(-2px);
+  }
+  /*=============================================
+  ここまで.menu-links -> ナビゲーションのクラス
+  ==============================================*/
+  
+  /*以下、メディアクエリ*/
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu {
+      grid-template-columns: 1fr; /*1列表示*/
+      text-align: center;
+    }
+  
+    .menu img {
+      margin-bottom: 1rem; /*画像間の余白を調整*/
+    }
+  
+    .menu-links .contents {
+      flex-direction: column; /*縦並び*/
+      gap: 1.2rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .menu img {
+      max-width: 60rem; /*中画面の画像幅制限*/
+    }
+  
+    .menu-links .contents {
+      gap: 2rem; /*コンテンツ間の余白を拡大*/
+    }
+  
+    .menu-links .item a {
+      font-size: 2rem; /*ボタンフォントサイズ調整*/
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .menu {
+      max-width: 100rem; /*メニューの幅制限*/
+    }
+  
+    .menu-links {
+      max-width: 100rem; /*メニューリンクの幅制限*/
+    }
+  
+    .menu img {
+      max-width: 80rem; /*大画面の画像幅制限*/
+    }
+  }
