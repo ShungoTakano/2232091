@@ -135,11 +135,11 @@ nav a:hover {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 20%; /* 横幅を元の5分の1に設定 */
-  height: auto; /* アスペクト比を維持 */
-  z-index: 1050; /* 高いZインデックスで他の要素の上に表示 */
-  box-shadow: 0 4px 8px var(--color-shadow); /* 影を追加 */
-  border-radius: 8px; /* 角を丸くする */
+  width: 20%;
+  height: auto;
+  z-index: 1050; /* 他の要素の上に表示 */
+  box-shadow: 0 4px 8px var(--color-shadow);
+  border-radius: 8px;
 }
 #floatingVideo video {
   width: 100%;
