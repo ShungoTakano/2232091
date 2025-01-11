@@ -133,8 +133,8 @@ nav a:hover {
 ==============================================*/
 #floatingVideo {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 2rem;
+  right: 2rem;
   width: 20%; /* 横幅を元の5分の1に設定 */
   height: auto; /* アスペクト比を維持 */
   z-index: 1050; /* 高いZインデックスで他の要素の上に表示 */
@@ -154,8 +154,8 @@ nav a:hover {
   color: white;
   border: none;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   text-align: center;
   cursor: pointer;
   z-index: 1100;
